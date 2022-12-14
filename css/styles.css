@@ -10,6 +10,7 @@
   --btn-color: #404bbf;
   --underline-color: #00bfff;
   --button-decoratin-color: #8a2be2;
+  --violet-color: #ee82ee;
 }
 
 .container {
@@ -209,10 +210,12 @@ a {
 .btn:hover,
 .btn:focus {
   background-color: var(--btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .btn:active {
   text-decoration: underline var(--button-decoratin-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /*section advantage*/
@@ -255,13 +258,10 @@ a {
   width: 264px;
   height: 112px;
   background-color: var(--light-color);
-  display: block;
-}
-
-.icon-box-advantage{
-background-repeat: no-repeat;
-background-size: contain;
-background-position: center;
+  display: flex;
+  justify-content:center; 
+  align-items: center;
+  border-radius: 4px;
 }
 
 
@@ -294,15 +294,15 @@ background-position: center;
   background-color: var(--light-color);
 }
 
-.section-team-box li {
+.section-team-box-li {
   background: var(--white-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-box {
-  padding: 32px 0;
+  padding-top: 32px;
+  padding-bottom: 36px;
 }
 
 .section-team-box {
@@ -337,45 +337,77 @@ background-position: center;
 }
 
 .team-social{
-  display: flex;
+display: flex;
 justify-content: center;
 gap: 24px;
+padding-top: 12px;
 }
 
-.team-svg-icon{
+.social-link {
   display: flex;
-  width: 40px;
+ justify-content:center; 
+ align-items: center;  
+ width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--brand-color);
+}
+
+.team-svg-icon {
+  fill: var(--light-color);
+}
+
+.social-link:hover,.social-link:focus {
+background-color: var(--success-color);
+}
+
+/*section-customers*/
+
+.section-customers{
 
 }
 
-.social-link{
+.title-customers{
+  color: var(--dark-color);
+  font-size: 36px;
+  line-height: 1.66;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.customers-list{
   display: flex;
- justify-content:
-  center; align-items: 
-  center;  width: 100%; 
-  height: 100%;
+  gap: 24px;
 }
 
-.team-svg-link a{
-}
-
-
-
-
-.logo-company-box{
+.customers-link{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 168px;
   height: 88px;
-  border: 1px solid #8e8f99;
+  color:var(--subtle-text-color);
+  border: 1px solid var(--subtle-text-color);
   border-radius: 3px;
 }
 
+.customers-link:hover, .customers-link:focus {
+color: var(--brand-color);
+border: 1px solid var(--brand-color);
+}
+
+.customers-svg-icon {
+  fill: currentColor;
+}
+
+
 /*filter*/
+
+.footer-block {
+  display: flex;
+}
 
 .filter-bottons {
   display: flex;
@@ -401,11 +433,53 @@ gap: 24px;
 .filter-botton:focus {
   background-color: var(--brand-color);
   color: var(--light-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-botton:active {
   text-decoration: underline var(--button-decoratin-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+.footer-link-block{
+display: inline-block;
+padding-left: 120px;
+}
+
+.footer-title-link{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: var(--light-color);
+margin-bottom: 16px;
+}
+
+.footer-team-social{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  }
+  
+  .footer-social-link {
+    display: flex;
+   justify-content:center; 
+   align-items: center;  
+   width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-svg-icon {
+    fill: var(--light-color);
+  }
+  
+  .footer-social-link:hover,.footer-social-link:focus {
+  background-color: var(--success-color);
+  cursor: pointer;
+  }
 
 /* proects */
 
@@ -417,6 +491,11 @@ gap: 24px;
   display: flex;
   flex-wrap: wrap;
 }
+
+.proect:hover, .proect:focus{
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .proects {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
