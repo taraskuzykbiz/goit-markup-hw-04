@@ -171,10 +171,15 @@ a {
 
 .section-main {
   background-color: var(--dark-color);
-  background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url("../images/people-office1.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   max-width: 1440px;
+  max-height: 603px;
   margin: 0 auto;
   padding: 192px 0;
 }
@@ -389,14 +394,13 @@ a {
   width: 168px;
   height: 88px;
   color: var(--subtle-text-color);
-  border: 1px solid var(currentColor);
+  border: 1px solid currentColor;
   border-radius: 3px;
 }
 
 .customers-link:hover,
 .customers-link:focus {
   color: var(--brand-color);
-  border: 1px solid var(--brand-color);
 }
 
 .customers-svg-icon {
@@ -407,6 +411,7 @@ a {
 
 .footer-block {
   display: flex;
+  align-items: baseline;
 }
 
 .filter-bottons {
